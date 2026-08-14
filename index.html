@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="description" content="Venkata Sai Putrayya Kola (KVSP) - AI & Machine Learning Engineer & Researcher Portfolio. Mobile-optimized interactive showcase of LLMs, Computer Vision, Robotics, and Machine Learning.">
+    <meta name="keywords" content="AI, Machine Learning, Deep Learning, LLMs, Computer Vision, Robotics, Data Science, Python, TensorFlow, PyTorch, KVSP Portfolio">
+    <meta name="author" content="Venkata Sai Putrayya Kola">
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:title" content="Venkata Sai Putrayya Kola | AI & ML Engineer Portfolio">
+    <meta property="og:description" content="Portfolio of Venkata Sai Putrayya Kola featuring LLMs, Computer Vision, Robotics, and Machine Learning implementations.">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="other-images/favicon.ico">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Typed.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    
+    <title>Venkata Sai Putrayya Kola | AI & ML Portfolio</title>
+</head>
+<body class="dark-theme">
+    <!-- Interactive Background Canvas -->
+    <canvas id="bg-canvas" class="bg-canvas"></canvas>
+    <div class="bg-gradient"></div>
+
+    <!-- Background Video (Subtle Ambient Overlay) -->
+    <video class="pc-video" autoplay muted loop playsinline poster="other-images/myimage.jpg">
+        <source src="other-images/background-video.mp4" type="video/mp4">
+    </video>
+
+    <!-- Header Navigation -->
+    <header class="glass-header" id="main-header">
+        <div class="header-container">
+            <a href="#home" class="logo" aria-label="KVSP Portfolio Home">
+                <span class="logo-icon">⟁</span>
+                <span class="logo-text">KV<span class="logo-highlight">SP</span></span>
+            </a>
+            
+            <nav id="nav-menu" class="glass-nav" aria-label="Main Navigation">
+                <ul>
+                    <li><a href="#home" class="nav-link active" id="nav-link-home"><i class="fas fa-home"></i> <span>Home</span></a></li>
+                    <li><a href="#about" class="nav-link" id="nav-link-about"><i class="fas fa-user-astronaut"></i> <span>About</span></a></li>
+                    <li><a href="#skills" class="nav-link" id="nav-link-skills"><i class="fas fa-code"></i> <span>Skills</span></a></li>
+                    <li><a href="#publications" class="nav-link" id="nav-link-publications"><i class="fas fa-book-open"></i> <span>Publications</span></a></li>
+                    <li><a href="#certificates" class="nav-link" id="nav-link-certificates"><i class="fas fa-certificate"></i> <span>Certificates</span></a></li>
+                    <li><a href="#project" class="nav-link" id="nav-link-project"><i class="fas fa-cubes"></i> <span>Projects</span></a></li>
+                    <li><a href="#contact" class="nav-link" id="nav-link-contact"><i class="fas fa-paper-plane"></i> <span>Contact</span></a></li>
+                </ul>
+                <div class="nav-indicator"></div>
+            </nav>
+
+            <div class="header-actions">
+                <button id="copy-email-quick" class="btn-icon-blur" title="Copy Email Address" aria-label="Copy Email">
+                    <i class="fas fa-copy"></i>
+                </button>
+                <button class="hamburger" id="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer Menu Overlay -->
+    <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+        <div class="drawer-header">
+            <span class="logo-text">KV<span class="logo-highlight">SP</span></span>
+            <button class="close-drawer" id="close-drawer-btn" aria-label="Close menu">&times;</button>
+        </div>
+        <ul class="drawer-links">
+            <li><a href="#home" class="drawer-link"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#about" class="drawer-link"><i class="fas fa-user-astronaut"></i> About</a></li>
+            <li><a href="#skills" class="drawer-link"><i class="fas fa-code"></i> Skills</a></li>
+            <li><a href="#publications" class="drawer-link"><i class="fas fa-book-open"></i> Publications</a></li>
+            <li><a href="#certificates" class="drawer-link"><i class="fas fa-certificate"></i> Certificates</a></li>
+            <li><a href="#project" class="drawer-link"><i class="fas fa-cubes"></i> Projects</a></li>
+            <li><a href="#contact" class="drawer-link"><i class="fas fa-paper-plane"></i> Contact</a></li>
+        </ul>
+        <div class="drawer-footer">
+            <a href="mailto:vsputrayyakola@gmail.com" class="drawer-email"><i class="fas fa-envelope"></i> vsputrayyakola@gmail.com</a>
+        </div>
+    </div>
+    <div class="drawer-backdrop" id="drawer-backdrop"></div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home / Hero Section -->
+        <section id="home" class="section home-section">
+            <div class="container home-container">
+                <div class="home-content">
+                    <div class="status-badge-container">
+                        <span class="status-dot"></span>
+                        <span class="status-text">Available for AI & ML Opportunities</span>
+                    </div>
+
+                    <div class="greeting">
+                        <span class="greeting-text">Hello, I'm</span>
+                    </div>
+
+                    <h1 class="name-title">
+                        <span class="name-part">Venkata Sai</span>
+                        <span class="name-highlight">Putrayya Kola</span>
+                    </h1>
+
+                    <div class="typing-container">
+                        <span class="typed-prefix">I am a </span>
+                        <span id="typed-text" class="typed-text"></span>
+                        <span class="typed-cursor">|</span>
+                    </div>
+
+                    <p class="home-description">
+                        AI & Machine Learning Engineer and Researcher passionate about building intelligent solutions, 
+                        deep neural network architectures, computer vision, and robotics systems.
+                    </p>
+
+                    <div class="home-actions">
+                        <a href="#project" class="btn btn-primary">
+                            <span>View My Work</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <span>Get In Touch</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </a>
+                        <a href="VENKATA SAI PUTRAYYA KOLA-1.docx" class="btn btn-outline" download>
+                            <i class="fas fa-file-download"></i>
+                            <span>Download CV</span>
+                        </a>
+                    </div>
+
+                    <!-- Clean Quick Stats Row -->
+                    <div class="quick-stats-row">
+                        <div class="stat-pill">
+                            <i class="fab fa-python"></i>
+                            <div>
+                                <strong>Python & AI</strong>
+                                <span>Core Tech Stack</span>
+                            </div>
+                        </div>
+                        <div class="stat-pill">
+                            <i class="fas fa-brain"></i>
+                            <div>
+                                <strong>Machine Learning</strong>
+                                <span>Deep Neural Models</span>
+                            </div>
+                        </div>
+                        <div class="stat-pill">
+                            <i class="fas fa-certificate"></i>
+                            <div>
+                                <strong>14+ Certifications</strong>
+                                <span>Verified Credentials</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="home-image-wrapper">
+                    <div class="image-card tilt-card" id="heroProfileCard">
+                        <div class="image-frame">
+                            <img src="other-images/myimage.jpg" alt="Venkata Sai Putrayya Kola profile photo" class="profile-image">
+                            <div class="image-overlay-glow"></div>
+                        </div>
+                        <div class="floating-tech-badges">
+                            <div class="tech-badge badge-python"><i class="fab fa-python"></i> Python</div>
+                            <div class="tech-badge badge-tf"><i class="fas fa-brain"></i> TensorFlow</div>
+                            <div class="tech-badge badge-torch"><i class="fas fa-fire"></i> PyTorch</div>
+                            <div class="tech-badge badge-ai"><i class="fas fa-robot"></i> Agentic AI</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scroll Indicator Wrapper -->
+            <div class="scroll-indicator-wrapper">
+                <a href="#about" class="scroll-indicator" aria-label="Scroll to About section">
+                    <div class="mouse"><div class="wheel"></div></div>
+                    <span class="scroll-text">Scroll Down</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section about-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag"><i class="fas fa-user-circle"></i> Background</span>
+                    <h2 class="section-title">
+                        <span class="title-text">About</span>
+                        <span class="title-highlight">Me</span>
+                    </h2>
+                    <p class="section-subtitle">Get to know my background, research interests, and journey in AI & Machine Learning</p>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-card glass-card">
+                        <p class="about-text leading-text">
+                            I am an enthusiastic undergraduate pursuing a degree in <strong>Artificial Intelligence & Machine Learning (AI & ML)</strong> at BVCITS College of Engineering, with a strong foundation in core machine learning principles, algorithms, and model development.
+                        </p>
+                        <p class="about-text">
+                            My academic and research work spans Large Language Models (LLMs), Computer Vision, Robotics, and Data Analytics. I am dedicated to publishing research and building scalable data-driven AI systems.
+                        </p>
+
+                        <div class="contact-quick-chips">
+                            <button class="chip-item copy-btn" data-copy="vsputrayyakola@gmail.com">
+                                <i class="fas fa-envelope"></i> vsputrayyakola@gmail.com <i class="fas fa-clone copy-icon"></i>
+                            </button>
+                            <button class="chip-item copy-btn" data-copy="+918121188303">
+                                <i class="fas fa-phone-alt"></i> +91 81211 88303 <i class="fas fa-clone copy-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Clean Stats Grid with Explicit Count of Research Papers: 3+ -->
+                    <div class="about-stats-grid">
+                        <div class="stat-card glass-card">
+                            <div class="stat-icon-wrapper"><i class="fas fa-laptop-code"></i></div>
+                            <div class="stat-info">
+                                <h3 class="stat-number">10+</h3>
+                                <p class="stat-label">AI & ML Projects</p>
+                            </div>
+                        </div>
+                        <div class="stat-card glass-card">
+                            <div class="stat-icon-wrapper"><i class="fas fa-file-alt"></i></div>
+                            <div class="stat-info">
+                                <h3 class="stat-number">0</h3>
+                                <p class="stat-label">Research Papers & Preprints</p>
+                            </div>
+                        </div>
+                        <div class="stat-card glass-card">
+                            <div class="stat-icon-wrapper"><i class="fas fa-graduation-cap"></i></div>
+                            <div class="stat-info">
+                                <h3 class="stat-number">9.04</h3>
+                                <p class="stat-label">B.Tech CGPA</p>
+                            </div>
+                        </div>
+                        <div class="stat-card glass-card">
+                            <div class="stat-icon-wrapper"><i class="fas fa-certificate"></i></div>
+                            <div class="stat-info">
+                                <h3 class="stat-number">10+</h3>
+                                <p class="stat-label">Verified Certifications</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Clean & Simple Skills Section -->
+        <section id="skills" class="section skills-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag"><i class="fas fa-cogs"></i> Technical Spectrum</span>
+                    <h2 class="section-title">
+                        <span class="title-text">Technical</span>
+                        <span class="title-highlight">Skills</span>
+                    </h2>
+                    <p class="section-subtitle">A clean and simple overview of my technical skills and competencies</p>
+                </div>
+
+                <div class="dashboard-tabs">
+                    <div class="tab-buttons" role="tablist">
+                        <button class="tab-button active" data-tab="tab-skills" id="btn-tab-skills" role="tab" aria-selected="true" aria-controls="tab-skills">
+                            <i class="fas fa-code"></i> <span>Skills Grid</span>
+                        </button>
+                        <button class="tab-button" data-tab="tab-education" id="btn-tab-education" role="tab" aria-selected="false" aria-controls="tab-education">
+                            <i class="fas fa-graduation-cap"></i> <span>Education & Journey</span>
+                        </button>
+                    </div>
+
+                    <div class="tab-contents">
+                        <!-- Simplified Clean Skills Grid -->
+                        <div class="tab-content active glass-card" id="tab-skills" role="tabpanel" aria-labelledby="btn-tab-skills">
+                            <div class="clean-skills-grid">
+                                
+                                <!-- Skill Category 1 -->
+                                <div class="clean-skill-card">
+                                    <div class="clean-card-header">
+                                        <div class="clean-icon"><i class="fas fa-brain"></i></div>
+                                        <h3 class="clean-card-title">Machine Learning & AI</h3>
+                                    </div>
+                                    <div class="clean-tags-list">
+                                        <span class="simple-tag"><i class="fas fa-check-circle"></i> Supervised Learning</span>
+                                        <span class="simple-tag"><i class="fas fa-check-circle"></i> Unsupervised Learning</span>
+                                        <span class="simple-tag"><i class="fas fa-check-circle"></i> Neural Networks</span>
+                                        <span class="simple-tag"><i class="fas fa-check-circle"></i> CNNs & RNNs</span>
+                                        <span class="simple-tag"><i class="fas fa-check-circle"></i> Model Evaluation</span>
+                                    </div>
+                                </div>
+
+                                <!-- Skill Category 2 -->
+                                <div class="clean-skill-card">
+                                    <div class="clean-card-header">
+                                        <div class="clean-icon"><i class="fas fa-robot"></i></div>
+                                        <h3 class="clean-card-title">LLMs & Agentic AI</h3>
+                                    </div>
+                                    <div class="clean-tags-list">
+                                        <span class="simple-tag"><i class="fas fa-bolt"></i> Large Language Models</span> <!--class=simple-tag highlight-tag*-->
+                                        <span class="simple-tag"><i class="fas fa-link"></i> LangChain</span>
+                                        <span class="simple-tag"><i class="fas fa-cubes"></i> Hugging Face</span>
+                                        <span class="simple-tag"><i class="fas fa-project-diagram"></i> Agentic Workflows</span>
+                                        <span class="simple-tag"><i class="fas fa-terminal"></i> Prompt Engineering</span>
+                                    </div>
+                                </div>
+
+                                <!-- Skill Category 3 -->
+                                <div class="clean-skill-card">
+                                    <div class="clean-card-header">
+                                        <div class="clean-icon"><i class="fas fa-eye"></i></div>
+                                        <h3 class="clean-card-title">Computer Vision & Robotics</h3>
+                                    </div>
+                                    <div class="clean-tags-list">
+                                        <span class="simple-tag"><i class="fas fa-object-group"></i> Object Detection</span>
+                                        <span class="simple-tag"><i class="fas fa-camera"></i> Image Processing</span>
+                                        <span class="simple-tag"><i class="fas fa-microchip"></i> Sensor Integration</span>
+                                        <span class="simple-tag"><i class="fas fa-cogs"></i> Autonomous Perception</span>
+                                        <span class="simple-tag"><i class="fas fa-crosshairs"></i> Vision Assistance</span>
+                                    </div>
+                                </div>
+
+                                <!-- Skill Category 4 -->
+                                <div class="clean-skill-card">
+                                    <div class="clean-card-header">
+                                        <div class="clean-icon"><i class="fas fa-layer-group"></i></div>
+                                        <h3 class="clean-card-title">Frameworks & Tools</h3>
+                                    </div>
+                                    <div class="clean-tags-list">
+                                        <span class="simple-tag"><i class="fab fa-python"></i> Python</span>
+                                        <span class="simple-tag"><i class="fas fa-brain"></i> TensorFlow</span>
+                                        <span class="simple-tag"><i class="fas fa-fire"></i> PyTorch</span>
+                                        <span class="simple-tag"><i class="fas fa-chart-line"></i> Scikit-Learn</span>
+                                        <span class="simple-tag"><i class="fas fa-calculator"></i> NumPy & Pandas</span>
+                                        <span class="simple-tag"><i class="fab fa-git-alt"></i> Git & GitHub</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Education Tab Content -->
+                        <div class="tab-content glass-card" id="tab-education" role="tabpanel" aria-labelledby="btn-tab-education">
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-date">2023 - 2027 (Expected)</div>
+                                    <div class="timeline-card">
+                                        <span class="timeline-badge">Present Student</span>
+                                        <h3 class="timeline-title">B.Tech in Artificial Intelligence & Machine Learning</h3>
+                                        <p class="timeline-institution"><i class="fas fa-university"></i> BVCITS College of Engineering</p>
+                                        <div class="score-pill"><i class="fas fa-star"></i> CGPA: <strong>9.04 / 10.0</strong></div>
+                                        <p class="timeline-desc">
+                                            Specializing in machine learning algorithms, deep neural architectures, computer vision, natural language processing, and robotics logic.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="timeline-item">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-date">2021 - 2023</div>
+                                    <div class="timeline-card">
+                                        <h3 class="timeline-title">MPC (Mathematics, Physics, Chemistry)</h3>
+                                        <p class="timeline-institution"><i class="fas fa-school"></i> Aditya Junior College</p>
+                                        <div class="score-pill"><i class="fas fa-check-circle"></i> Aggregate: <strong>94.8%</strong></div>
+                                        <p class="timeline-desc">
+                                            Training in calculus, analytical physics, physical chemistry, and foundational algorithmic problem-solving.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Publications Section -->
+        <section id="publications" class="section publications-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag"><i class="fas fa-newspaper"></i> Scientific Papers</span>
+                    <h2 class="section-title">
+                        <span class="title-text">Research</span>
+                        <span class="title-highlight">Publications</span>
+                    </h2>
+                    <p class="section-subtitle">Academic papers, preprints, and research studies in AI & Machine Learning</p>
+                </div>
+
+                <div class="publications-list">
+                    <div class="publication-card glass-card">
+                        <div class="pub-type-badge"><i class="fas fa-file-alt"></i> Research Paper</div>
+                        <h3 class="pub-title">Yet to come...</h3>
+                        <p class="pub-authors"><i class="fas fa-user-edit"></i> <strong>Venkata Sai Putrayya Kola</strong>, et al.</p>
+                        <p class="pub-abstract">
+                        
+                    </div>
+                    <!-- Publication Card 1 -->
+                    <!-- <div class="publication-card glass-card">
+                        <div class="pub-type-badge"><i class="fas fa-file-alt"></i> Research Paper</div>
+                        <h3 class="pub-title">Autonomous Multi-Agent Orchestration for Career Trajectory Synthesis using Large Language Models</h3>
+                        <p class="pub-authors"><i class="fas fa-user-edit"></i> <strong>Venkata Sai Putrayya Kola</strong>, et al.</p>
+                        <p class="pub-venue"><i class="fas fa-bookmark"></i> Pre-print / Research Manuscript • 2024</p>
+                        <p class="pub-abstract">
+                            This study proposes a novel multi-agent LLM framework designed to dynamically evaluate student competency matrices against real-time industry demand data to generate personalized, step-by-step career development roadmaps.
+                        </p>
+                        <div class="pub-tags">
+                            <span class="pub-tag">LLMs</span>
+                            <span class="pub-tag">Agentic AI</span>
+                            <span class="pub-tag">LangChain</span>
+                            <span class="pub-tag">NLP</span>
+                        </div>
+                    </div> -->
+
+                    <!-- Publication Card 2 -->
+                    <!-- <div class="publication-card glass-card">
+                        <div class="pub-type-badge"><i class="fas fa-file-medical"></i> Neural Model Study</div>
+                        <h3 class="pub-title">Deep Neural Network Approaches for Fetal Health Classification from Cardiotocography Diagnostics</h3>
+                        <p class="pub-authors"><i class="fas fa-user-edit"></i> <strong>Venkata Sai Putrayya Kola</strong></p>
+                        <p class="pub-venue"><i class="fas fa-bookmark"></i> Machine Learning Healthcare Study • 2024</p>
+                        <p class="pub-abstract">
+                            Investigation into multi-class neural network architectures for predicting fetal health status (Normal, Suspect, Pathological) from Cardiotocography (CTG) diagnostic features, optimizing recall metrics for clinical applications.
+                        </p>
+                        <div class="pub-tags">
+                            <span class="pub-tag">Machine Learning</span>
+                            <span class="pub-tag">TensorFlow</span>
+                            <span class="pub-tag">Healthcare AI</span>
+                            <span class="pub-tag">Neural Networks</span>
+                        </div>
+                    </div> -->
+
+                    <!-- Publication Card 3 -->
+                    <!-- <div class="publication-card glass-card">
+                        <div class="pub-type-badge"><i class="fas fa-eye"></i> Vision & Perception</div>
+                        <h3 class="pub-title">Real-Time Spatial Computer Vision & Assistive Perception for Edge Devices</h3>
+                        <p class="pub-authors"><i class="fas fa-user-edit"></i> <strong>Venkata Sai Putrayya Kola</strong></p>
+                        <p class="pub-venue"><i class="fas fa-bookmark"></i> Computer Vision & Robotics Research • 2024</p>
+                        <p class="pub-abstract">
+                            A lightweight real-time object detection and spatial feedback pipeline designed for edge vision assistance and autonomous robotic navigation, reducing latency while maintaining detection precision.
+                        </p>
+                        <div class="pub-tags">
+                            <span class="pub-tag">Computer Vision</span>
+                            <span class="pub-tag">Object Detection</span>
+                            <span class="pub-tag">Robotics</span>
+                            <span class="pub-tag">OpenCV</span>
+                        </div>
+                    </div> -->
+
+                </div>
+            </div>
+        </section>
+    
+        <!-- Certificate Gallery Section with Mobile Touch Swipe Hint -->
+        <section id="certificates" class="section certificates-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag"><i class="fas fa-award"></i> Verified Credentials</span>
+                    <h2 class="section-title">
+                        <span class="title-text">Certification</span>
+                        <span class="title-highlight">Gallery</span>
+                    </h2>
+                    <p class="section-subtitle">Click or tap any certificate to open interactive fullscreen lightbox</p>
+                    <div class="mobile-swipe-hint"><i class="fas fa-hand-pointer"></i> Swipe left or right to browse certificates</div>
+                </div>
+
+                <div class="certificate-wrapper">
+                    <div class="carousel-nav-btn prev-btn" id="certPrevBtn" title="Previous Certificate">
+                        <i class="fas fa-chevron-left"></i>
+                    </div>
+
+                    <div class="certificate-track" id="certificateTrack">
+                        <!-- Loaded dynamically via JavaScript -->
+                    </div>
+
+                    <div class="carousel-nav-btn next-btn" id="certNextBtn" title="Next Certificate">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+
+                <div class="carousel-dots" id="certDots"></div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="project" class="section projects-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag"><i class="fas fa-cubes"></i> Portfolio Work</span>
+                    <h2 class="section-title">
+                        <span class="title-text">My</span>
+                        <span class="title-highlight">Projects</span>
+                    </h2>
+                    <p class="section-subtitle">Explore my projects across LLMs, Computer Vision, Robotics, Machine Learning, and Data Science</p>
+                </div>
+
+                <!-- Filter Controls (Horizontally scrollable with touch snap on mobile) -->
+                <div class="project-filters-wrapper">
+                    <div class="project-filters" id="project-filters">
+                        <button class="filter-btn active" data-filter="all">All Projects</button>
+                        <button class="filter-btn" data-filter="llm"><i class="fas fa-robot"></i> LLMs</button>
+                        <button class="filter-btn" data-filter="cv"><i class="fas fa-eye"></i> Computer Vision</button>
+                        <button class="filter-btn" data-filter="robotics"><i class="fas fa-microchip"></i> Robotics</button>
+                        <button class="filter-btn" data-filter="ml"><i class="fas fa-brain"></i> Machine Learning</button>
+                        <button class="filter-btn" data-filter="ds"><i class="fas fa-chart-bar"></i> Data Science</button>
+                    </div>
+                </div>
+
+                <!-- Projects Grid -->
+                <div class="projects-grid" id="projectsGrid">
+                    <!-- Dynamic project cards generated via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag"><i class="fas fa-comments"></i> Connect</span>
+                    <h2 class="section-title">
+                        <span class="title-text">Contact</span>
+                        <span class="title-highlight">Me</span>
+                    </h2>
+                    <p class="section-subtitle">Interested in collaborating or discussing AI, LLMs, or Robotics? Send me a message!</p>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-card glass-card">
+                        <h3 class="contact-title"><i class="fas fa-address-card"></i> Get In Touch</h3>
+                        <p class="contact-subtext">
+                            Reach out directly via email, phone, or LinkedIn. I am open to AI/ML projects and research collaborations.
+                        </p>
+
+                        <div class="contact-list">
+                            <div class="contact-item">
+                                <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                                <div class="contact-details">
+                                    <span class="detail-label">Email</span>
+                                    <a href="mailto:vsputrayyakola@gmail.com" class="detail-value">vsputrayyakola@gmail.com</a>
+                                </div>
+                                <button class="btn-copy-mini copy-btn" data-copy="vsputrayyakola@gmail.com" title="Copy Email">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                                <div class="contact-details">
+                                    <span class="detail-label">Phone</span>
+                                    <a href="tel:+918121188303" class="detail-value">+91 81211 88303</a>
+                                </div>
+                                <button class="btn-copy-mini copy-btn" data-copy="+918121188303" title="Copy Phone">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon"><i class="fas fa-location-dot"></i></div>
+                                <div class="contact-details">
+                                    <span class="detail-label">Location</span>
+                                    <span class="detail-value">Andhra Pradesh, India</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-links-wrapper">
+                            <h4>Connect On Social</h4>
+                            <div class="social-links">
+                                <a href="https://www.linkedin.com/in/kola-venkata-sai-putrayya-7spvsbbs/" target="_blank" rel="noopener" class="social-link linkedin" aria-label="LinkedIn Profile">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="https://github.com/KolaChinni" target="_blank" rel="noopener" class="social-link github" aria-label="GitHub Profile">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="mailto:vsputrayyakola@gmail.com" class="social-link mail" aria-label="Send Email">
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <a href="VENKATA SAI PUTRAYYA KOLA-1.docx" class="btn btn-download-cv" download>
+                            <i class="fas fa-download"></i>
+                            <span>Download CV</span>
+                        </a>
+                    </div>
+
+                    <div class="contact-form-card glass-card">
+                        <form id="contactForm" name="submit-to-google-sheet">
+                            <h3 class="form-title"><i class="fas fa-paper-plane"></i> Send Message</h3>
+                            
+                            <div class="form-group">
+                                <input type="text" name="Name" id="name" required placeholder=" ">
+                                <label for="name">Your Name</label>
+                                <span class="focus-border"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="email" name="email" id="email" required placeholder=" ">
+                                <label for="email">Your Email Address</label>
+                                <span class="focus-border"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <textarea name="Message" id="message" rows="4" required placeholder=" "></textarea>
+                                <label for="message">Your Message</label>
+                                <span class="focus-border"></span>
+                            </div>
+
+                            <button type="submit" class="btn btn-submit" id="submitBtn">
+                                <span class="btn-text">Send Message</span>
+                                <i class="fas fa-paper-plane btn-icon"></i>
+                                <span class="spinner"></span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="#home" class="logo">
+                    <span class="logo-icon">⟁</span>
+                    <span class="logo-text">KV<span class="logo-highlight">SP</span></span>
+                </a>
+                <p>AI & Machine Learning Engineer | LLMs, Computer Vision & Robotics</p>
+            </div>
+            
+            <div class="footer-nav">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#publications">Publications</a>
+                <a href="#certificates">Certificates</a>
+                <a href="#project">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Venkata Sai Putrayya Kola (KVSP). All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTopBtn" aria-label="Scroll back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- CERTIFICATE LIGHTBOX MODAL -->
+    <div class="lightbox-modal" id="certLightbox" aria-hidden="true" role="dialog" aria-label="Certificate Lightbox">
+        <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+        <div class="lightbox-content">
+            <button class="lightbox-close" id="lightboxClose" aria-label="Close Lightbox">&times;</button>
+            <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous Certificate"><i class="fas fa-chevron-left"></i></button>
+            
+            <div class="lightbox-image-container">
+                <img src="" alt="Certificate" id="lightboxImage" class="lightbox-img">
+                <div class="lightbox-caption" id="lightboxCaption">Certificate Title</div>
+            </div>
+
+            <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next Certificate"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+
+    <!-- PROJECT DETAIL MODAL -->
+    <div class="project-modal" id="projectModal" aria-hidden="true" role="dialog" aria-label="Project Details">
+        <div class="modal-backdrop" id="projectModalBackdrop"></div>
+        <div class="modal-card glass-card">
+            <button class="modal-close" id="projectModalClose" aria-label="Close Modal">&times;</button>
+            <div class="modal-body" id="projectModalBody">
+                <!-- Dynamically injected via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION CONTAINER -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- JS script -->
+    <script src="script.js"></script>
+</body>
+</html>
