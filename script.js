@@ -4,7 +4,6 @@
    Fully Mobile & Touch Optimized
    ================================================================ */
 
-
 document.addEventListener('DOMContentLoaded', function () {
     console.log('🚀 Initializing KVSP Mobile & Desktop Portfolio Engine...');
 
