@@ -487,26 +487,39 @@ function initProjectsSystem() {
 
     const projectsData = [
         {
-            id: 'agentic-ai-career',
-            category: 'llm',
-            title: 'Career Guidance Agentic AI System',
-            tag: 'LLMs & Agentic AI',
-            image: 'certi-images/image-1.png',
-            description: 'Autonomous AI agent system powered by Large Language Models (LLMs) to analyze student skill gaps and synthesize personalized career roadmaps.',
-            tech: ['Python', 'LLMs', 'LangChain', 'Hugging Face', 'Prompt Engineering'],
-            features: [
-                'Hackathon 3rd Place winning LLM implementation',
-                'Autonomous multi-agent orchestration for skill assessment',
-                'Generates custom learning milestones and job match scores'
+            id: 'meds-ai-pharmacy',
+            category: 'ai',
+            title: 'MEDS – AI-Powered Pharmacy Operations Platform',
+            tag: 'AI & Full-Stack',
+            image: 'project-images/pharmacy.png',
+            description: 'AI-powered pharmacy operations platform combining LLM-based conversational intelligence, machine learning analytics, inventory management, and POS workflows into a unified system.',
+            tech: [
+                'Python',
+                'Flask',
+                'Scikit-Learn',
+                'Ollama',
+                'LLMs',
+                'NumPy',
+                'Pandas',
+                'SQLAlchemy',
+                'JavaScript',
+                'Docker'
             ],
-            github: 'https://github.com/KolaChinni'
+            features: [
+                'Built a local LLM-powered AI assistant using Ollama for natural-language pharmacy analytics and operational queries',
+                'Implemented demand forecasting with Linear Regression and fraud/anomaly detection using Isolation Forest',
+                'Developed automated stock replenishment recommendations based on predicted demand and inventory levels',
+                'Built JWT authentication, role-based access control, POS billing, FIFO inventory deduction, and real-time expiry tracking',
+                'Integrated executive dashboards with revenue, profit, outlet performance, and medicine sales analytics'
+            ],
+            github: 'https://github.com/kvsp7/MEDS'
         },
         {
             id: 'vision-assistance',
             category: 'cv',
             title: 'Real-Time Vision Assistance System',
             tag: 'Computer Vision',
-            image: 'project-images/fetalProject.jpeg',
+            image: 'project-images/vision.png',
             description: 'A real-time Computer Vision system utilizing object detection algorithms to aid visually impaired individuals by analyzing camera feeds and giving spatial feedback.',
             tech: ['Python', 'OpenCV', 'YOLO', 'CNNs', 'Audio Feedback API'],
             features: [
@@ -516,66 +529,76 @@ function initProjectsSystem() {
             ],
             github: 'https://github.com/KolaChinni'
         },
+        // {
+        //     id: 'robotics-navigation',
+        //     category: 'robotics',
+        //     title: 'Autonomous Vision & Perception Robot',
+        //     tag: 'Robotics',
+        //     image: 'project-images/vision.png',
+        //     description: 'Robotics navigation system integrating camera vision perception with sensor feedback for autonomous obstacle avoidance and path planning.',
+        //     tech: ['Python', 'Robotics AI', 'OpenCV', 'Microcontroller Interface', 'Path Planning'],
+        //     features: [
+        //         'Autonomous vision-guided path planning and collision avoidance',
+        //         'Real-time sensor data fusion with camera feeds',
+        //         'Custom motor control feedback loop'
+        //     ],
+        //     github: 'https://github.com/KolaChinni'
+        // },
+        // {
+        //     id: 'fetal-health',
+        //     category: 'ml',
+        //     title: 'Fetal Health Prediction System',
+        //     tag: 'Machine Learning',
+        //     image: 'project-images/fetalProject.jpeg',
+        //     description: 'A deep neural network and machine learning model built to classify fetal health status (Normal, Suspect, Pathological) from CTG diagnostic data.',
+        //     tech: ['Python', 'TensorFlow', 'Scikit-Learn', 'Pandas', 'Neural Networks'],
+        //     features: [
+        //         'High multi-class classification precision on CTG health data',
+        //         'Feature selection and correlation analysis for medical metrics',
+        //         'Confidence score output and diagnostic summary'
+        //     ],
+        //     github: 'https://github.com/KolaChinni/FetalHealthPrediction-Neural-Network-'
+        // },
         {
-            id: 'robotics-navigation',
-            category: 'robotics',
-            title: 'Autonomous Vision & Perception Robot',
-            tag: 'Robotics',
-            image: 'project-images/blackjack.jpg',
-            description: 'Robotics navigation system integrating camera vision perception with sensor feedback for autonomous obstacle avoidance and path planning.',
-            tech: ['Python', 'Robotics AI', 'OpenCV', 'Microcontroller Interface', 'Path Planning'],
-            features: [
-                'Autonomous vision-guided path planning and collision avoidance',
-                'Real-time sensor data fusion with camera feeds',
-                'Custom motor control feedback loop'
+            id: 'ecoquest',
+            category: 'web',
+            title: 'EcoQuest – Gamified Environmental Learning Platform',
+            tag: 'Full-Stack & FastAPI',
+            image: 'project-images/ecofy.png',
+            description: 'Gamified environmental learning platform featuring interactive vector animations, an SVG-based Quest Tree, and a FastAPI backend for application functionality.',
+            tech: [
+                'Python',
+                'FastAPI',
+                'Pydantic',
+                'Uvicorn',
+                'JavaScript',
+                'HTML5',
+                'CSS3',
+                'SVG'
             ],
-            github: 'https://github.com/KolaChinni'
+            features: [
+                'Built a gamified environmental learning experience with interactive quests and vector-based animations',
+                'Designed an SVG-based Quest Tree for interactive navigation through learning content',
+                'Developed a FastAPI backend with API documentation and Pydantic-based request validation',
+                'Implemented separate frontend and backend services with local development environments'
+            ],
+            github: 'https://github.com/kvsp7/EcoQuest'
         },
-        {
-            id: 'fetal-health',
-            category: 'ml',
-            title: 'Fetal Health Prediction System',
-            tag: 'Machine Learning',
-            image: 'project-images/fetalProject.jpeg',
-            description: 'A deep neural network and machine learning model built to classify fetal health status (Normal, Suspect, Pathological) from CTG diagnostic data.',
-            tech: ['Python', 'TensorFlow', 'Scikit-Learn', 'Pandas', 'Neural Networks'],
-            features: [
-                'High multi-class classification precision on CTG health data',
-                'Feature selection and correlation analysis for medical metrics',
-                'Confidence score output and diagnostic summary'
-            ],
-            github: 'https://github.com/KolaChinni/FetalHealthPrediction-Neural-Network-'
-        },
-        {
-            id: 'linear-regression-studio',
-            category: 'ds',
-            title: 'Interactive Linear Regression Studio',
-            tag: 'Data Science',
-            image: 'project-images/simplelinearregression.png',
-            description: 'An interactive web analytics application that visualizes simple and multiple linear regression models, residual errors, and hyperparameter tuning in real time.',
-            tech: ['Python', 'Streamlit', 'Scikit-Learn', 'Plotly', 'NumPy'],
-            features: [
-                'Real-time scatter plot rendering with custom slope/intercept lines',
-                'Cost function gradient descent visual step-by-step runner',
-                'Exportable metric summaries (R2, MSE, MAE)'
-            ],
-            github: 'https://github.com/KolaChinni'
-        },
-        {
-            id: 'multi-regression-explorer',
-            category: 'ds',
-            title: 'Multi-Variate Data Analytics Toolkit',
-            tag: 'Data Science',
-            image: 'project-images/multiplelinearregression.png',
-            description: 'Exploratory data analysis toolkit implementing multi-variate regression analysis, multicollinearity checks (VIF), and diagnostic residual distribution plots.',
-            tech: ['Python', 'Pandas', 'Seaborn', 'Matplotlib', 'Statsmodels'],
-            features: [
-                'Automated correlation matrix heatmaps and pair plots',
-                'Variance Inflation Factor (VIF) collinearity detection',
-                'Statistical hypothesis testing module'
-            ],
-            github: 'https://github.com/KolaChinni'
-        }
+        // {
+        //     id: 'multi-regression-explorer',
+        //     category: 'ds',
+        //     title: 'Multi-Variate Data Analytics Toolkit',
+        //     tag: 'Data Science',
+        //     image: 'project-images/multiplelinearregression.png',
+        //     description: 'Exploratory data analysis toolkit implementing multi-variate regression analysis, multicollinearity checks (VIF), and diagnostic residual distribution plots.',
+        //     tech: ['Python', 'Pandas', 'Seaborn', 'Matplotlib', 'Statsmodels'],
+        //     features: [
+        //         'Automated correlation matrix heatmaps and pair plots',
+        //         'Variance Inflation Factor (VIF) collinearity detection',
+        //         'Statistical hypothesis testing module'
+        //     ],
+        //     github: 'https://github.com/KolaChinni'
+        // }
     ];
 
     function renderProjects(filter = 'all') {
