@@ -359,7 +359,7 @@ function initCertificateSystem() {
         `;
 
         card.querySelector('img').onerror = function () {
-            this.src = 'other-images/myimage.jpg';
+            this.src = 'other-images/myimage7.jpg';
         };
 
         card.addEventListener('click', () => openLightbox(idx));
@@ -634,7 +634,7 @@ function initProjectsSystem() {
             `;
 
             card.querySelector('img').onerror = function () {
-                this.src = 'other-images/myimage.jpg';
+                this.src = 'other-images/myimage7.jpg';
             };
 
             card.querySelector('.btn-project-detail').addEventListener('click', () => openProjectModal(project));
